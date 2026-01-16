@@ -52,7 +52,8 @@ def download():
             }
         }
     }
-
+    if os.path.exists('cookies.txt'):
+        ydl_opts['cookiefile'] = 'cookies.txt'
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(url, download=True)
@@ -92,4 +93,5 @@ def download():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
 
