@@ -42,7 +42,7 @@ def download():
     # yt-dlp options
     ydl_opts = {
         # Try specific standard formats (18=360p, 22=720p) which are always single files
-        'format': '18/22/best', 
+        'format': 'best', 
         'outtmpl': os.path.join(DOWNLOAD_FOLDER, f'{download_id}.%(ext)s'),
         'noplaylist': True,
         'quiet': True,
@@ -98,4 +98,5 @@ def download():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
 
