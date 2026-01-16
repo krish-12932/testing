@@ -41,7 +41,7 @@ def download():
     
     # yt-dlp options
     ydl_opts = {
-        'format': 'best[ext=mp4]/best',  # Download best MP4 available
+        'format': 'best',  # Download best MP4 available
         'outtmpl': os.path.join(DOWNLOAD_FOLDER, f'{download_id}.%(ext)s'),
         'noplaylist': True,
         'quiet': True,
@@ -93,5 +93,6 @@ def download():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
 
 
