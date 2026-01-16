@@ -46,6 +46,11 @@ def download():
         'noplaylist': True,
         'quiet': True,
         'no_warnings': True,
+        'extractor_args':{
+            'youtube':{
+                'player_client':['android', 'web']
+            }
+        }
     }
 
     try:
@@ -87,3 +92,4 @@ def download():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
